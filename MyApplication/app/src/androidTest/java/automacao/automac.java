@@ -28,33 +28,41 @@ public class automac extends Instrumentation {
 
 
     @Test
-    public void LigarTela () throws Exception {
+    public void LigarTela() throws Exception {
 
         /*ligando a tela*/
         if (!mDevice.isScreenOn()) {
             mDevice.wakeUp();
             mDevice.pressHome();
         }
-        //Create UiObject instance for the UI element
-
-
-        UiObject AppTray_Button = new UiObject(new UiSelector().description("Apps"));
-        /* Check if the button exists */
-        if (AppTray_Button.exists()) {
-            //Click on the Button
-            AppTray_Button.clickAndWaitForNewWindow();
-        }
-
-        UiObject Settings = new UiObject( (new UiSelector().description("Settings")));
-
-        if (Settings.exists()){
-            Settings.clickAndWaitForNewWindow();
-        }
-
-        UiObject Bluetooth = new UiObject((new UiSelector().description("Bluetooth")));
-        if (Bluetooth.exists()) {
-            Bluetooth.clickAndWaitForNewWindow();
-        }
     }
+
+    @Test
+    public void AbreMenuApp() throws Exception {
+
+        UiObject MenuApp = mDevice.findObject(new UiSelector().text("Apps"));
+        MenuApp.clickAndWaitForNewWindow();
+    }
+
+
+    @Test
+    public void Ajustes() throws Exception {
+        UiObject Settings = mDevice.findObject(new UiSelector().text("Settings"));
+        Settings.clickAndWaitForNewWindow();
+    }
+
+    @Test
+    public void SelecionaBT() throws Exception {
+
+        UiObject sBT = mDevice.findObject(new UiSelector().text("Bluetooth"));
+        sBT.clickAndWaitForNewWindow();
+
+        UiObject SwitchBT = sBT.getChild(new UiSelector().text("ON"));
+        SwitchBT.click();
+    }
+
 }
+
+
+
 
