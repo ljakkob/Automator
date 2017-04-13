@@ -61,6 +61,7 @@ public class automac extends Instrumentation {
         SwitchBT.click();
     }
 
+     //aiimeudeus foi pass
 }
 
 
