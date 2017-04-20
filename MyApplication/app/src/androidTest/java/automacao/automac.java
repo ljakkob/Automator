@@ -35,23 +35,25 @@ public class automac extends Instrumentation {
             mDevice.wakeUp();
             mDevice.pressHome();
         }
+
+
     }
 
     @Test
     public void AbreMenuApp() throws Exception {
 
-        UiObject MenuApp = mDevice.findObject(new UiSelector().text("Apps"));
+        UiObject MenuApp = mDevice.findObject(new UiSelector().description("Apps"));
         MenuApp.clickAndWaitForNewWindow();
     }
 
 
     @Test
     public void Ajustes() throws Exception {
-        UiObject Settings = mDevice.findObject(new UiSelector().text("Settings"));
+        UiObject Settings = mDevice.findObject(new UiSelector().description("Settings"));
         Settings.clickAndWaitForNewWindow();
     }
 
-    @Test
+    /*@Test
     public void SelecionaBT() throws Exception {
 
         UiObject sBT = mDevice.findObject(new UiSelector().text("Bluetooth"));
@@ -59,10 +61,25 @@ public class automac extends Instrumentation {
 
         UiObject SwitchBT = sBT.getChild(new UiSelector().text("ON"));
         SwitchBT.click();
-    }
+    }*/
 
-     //aiimeudeus foi pass
-}
+    @Test
+
+    public void AbreRadio () throws Exception{
+
+        mDevice.pressHome();
+        AbreMenuApp();
+        UiObject radio = mDevice.findObject(new UiSelector().description("FM Radio"));
+        radio.clickAndWaitForNewWindow();
+
+    }}
+
+
+
+
+
+
+
 
 
 

@@ -572,8 +572,8 @@ jQuery.cookie = function(name, value, options) {
 <body>
 <div id="container">
 <div id="header">
-<div class="time">11.17 s</div>
-<h1>automac: <strong><span class="total">4 total, </span><span class="error">1 error, </span><span class="passed">3 passed</span></strong>
+<div class="time">37.97 s</div>
+<h1>automac: <strong><span class="total">4 total, </span><span class="error">3 error, </span><span class="passed">1 passed</span></strong>
 </h1>
 <div id="treecontrol">
 <ul>
@@ -591,33 +591,43 @@ jQuery.cookie = function(name, value, options) {
 <ul id="tree">
 <li xmlns="" class="level top failed open">
 <span><em class="time">
-<div class="time">11.17 s</div>
+<div class="time">37.97 s</div>
 </em>automacao.automac</span>
 <ul>
 <li class="level test">
 <span><em class="time">
-<div class="time">50 ms</div>
+<div class="time">2.50 s</div>
 </em><em class="status">passed</em>LigarTela</span>
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">11.04 s</div>
+<div class="time">11.48 s</div>
 </em><em class="status">error</em>AbreMenuApp</span>
 <ul>
 <li class="text">
-<span class="stderr">android.support.test.uiautomator.UiObjectNotFoundException: UiSelector[CLASS=android.widget.TextView, INDEX=4, PACKAGE NAME=com.sec.android.app.launcher, RESOURCE_ID=com.sec.android.app.launcher:id/home_allAppsIcon]<br/>at android.support.test.uiautomator.UiObject.clickAndWaitForNewWindow(UiObject.java:452)<br/>at android.support.test.uiautomator.UiObject.clickAndWaitForNewWindow(UiObject.java:430)<br/>at automacao.automac.AbreMenuApp(automac.java:48)<br/>at java.lang.reflect.Method.invoke(Native Method)<br/>at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br/>at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br/>at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br/>at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runners.Suite.runChild(Suite.java:128)<br/>at org.junit.runners.Suite.runChild(Suite.java:27)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:137)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:115)<br/>at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)<br/>at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)<br/>at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1960)<br/></span>
+<span class="stderr">android.support.test.uiautomator.UiObjectNotFoundException: UiSelector[TEXT=Apps]<br/>at android.support.test.uiautomator.UiObject.clickAndWaitForNewWindow(UiObject.java:452)<br/>at android.support.test.uiautomator.UiObject.clickAndWaitForNewWindow(UiObject.java:430)<br/>at automacao.automac.AbreMenuApp(automac.java:47)<br/>at java.lang.reflect.Method.invoke(Native Method)<br/>at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br/>at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br/>at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br/>at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runners.Suite.runChild(Suite.java:128)<br/>at org.junit.runners.Suite.runChild(Suite.java:27)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:137)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:115)<br/>at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)<br/>at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)<br/>at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)<br/></span>
 </li>
 </ul>
 </li>
-<li class="level test">
+<li class="level test failed open">
 <span><em class="time">
-<div class="time">51 ms</div>
-</em><em class="status">passed</em>Ajustes</span>
+<div class="time">11.82 s</div>
+</em><em class="status">error</em>Ajustes</span>
+<ul>
+<li class="text">
+<span class="stderr">android.support.test.uiautomator.UiObjectNotFoundException: UiSelector[TEXT=Settings]<br/>at android.support.test.uiautomator.UiObject.clickAndWaitForNewWindow(UiObject.java:452)<br/>at android.support.test.uiautomator.UiObject.clickAndWaitForNewWindow(UiObject.java:430)<br/>at automacao.automac.Ajustes(automac.java:54)<br/>at java.lang.reflect.Method.invoke(Native Method)<br/>at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br/>at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br/>at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br/>at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runners.Suite.runChild(Suite.java:128)<br/>at org.junit.runners.Suite.runChild(Suite.java:27)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:137)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:115)<br/>at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)<br/>at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)<br/>at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)<br/></span>
 </li>
-<li class="level test">
+</ul>
+</li>
+<li class="level test failed open">
 <span><em class="time">
-<div class="time">25 ms</div>
-</em><em class="status">passed</em>SelecionaBT</span>
+<div class="time">12.16 s</div>
+</em><em class="status">error</em>SelecionaBT</span>
+<ul>
+<li class="text">
+<span class="stderr">android.support.test.uiautomator.UiObjectNotFoundException: UiSelector[TEXT=Bluetooth, CHILD=UiSelector[TEXT=ON]]<br/>at android.support.test.uiautomator.UiObject.click(UiObject.java:412)<br/>at automacao.automac.SelecionaBT(automac.java:64)<br/>at java.lang.reflect.Method.invoke(Native Method)<br/>at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)<br/>at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)<br/>at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)<br/>at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)<br/>at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)<br/>at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)<br/>at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runners.Suite.runChild(Suite.java:128)<br/>at org.junit.runners.Suite.runChild(Suite.java:27)<br/>at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:137)<br/>at org.junit.runner.JUnitCore.run(JUnitCore.java:115)<br/>at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)<br/>at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)<br/>at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)<br/></span>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -625,7 +635,7 @@ jQuery.cookie = function(name, value, options) {
 </div>
 </div>
 <div id="footer">
-<p>Generated by Android Studio on 03/04/17 23:22</p>
+<p>Generated by Android Studio on 13/04/17 13:05</p>
 </div>
 </body>
 </html>
