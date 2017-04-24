@@ -27,17 +27,14 @@ public class automac extends Instrumentation {
     }
 
 
-    @Test
+    /*@Test
     public void LigarTela() throws Exception {
 
-        /*ligando a tela*/
         if (!mDevice.isScreenOn()) {
             mDevice.wakeUp();
             mDevice.pressHome();
         }
-
-
-    }
+    }*/
 
     @Test
     public void AbreMenuApp() throws Exception {
@@ -65,14 +62,30 @@ public class automac extends Instrumentation {
 
     @Test
 
-    public void AbreRadio () throws Exception{
+    public void AbreRadio () throws Exception {
 
         mDevice.pressHome();
         AbreMenuApp();
         UiObject radio = mDevice.findObject(new UiSelector().description("FM Radio"));
         radio.clickAndWaitForNewWindow();
 
-    }}
+
+        int cont = 0;
+
+        while (cont<=6) {
+            UiObject Favorite = mDevice.findObject(new UiSelector().description("Favorite"));
+            Favorite.click();
+
+            UiObject proxRadio = mDevice.findObject(new UiSelector().description("Next seek"));
+            proxRadio.clickAndWaitForNewWindow();
+            cont = cont + 1;
+        }
+        mDevice.pressHome();
+
+    }
+
+
+}
 
 
 
