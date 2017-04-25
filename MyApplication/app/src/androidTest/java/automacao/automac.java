@@ -45,7 +45,6 @@ public class automac extends Instrumentation {
         MenuApp.clickAndWaitForNewWindow();
     }
 
-
     @Test
     public void Ajustes() throws Exception {
         UiObject Settings = mDevice.findObject(new UiSelector().description("Settings"));
@@ -63,7 +62,6 @@ public class automac extends Instrumentation {
     }*/
 
     @Test
-
     /*public void AbreRadio () throws Exception {
         mDevice.pressHome();
         AbreMenuApp();
@@ -124,16 +122,14 @@ public class automac extends Instrumentation {
         UiObject name = mDevice.findObject(new UiSelector().text("Name"));
         name.clickAndWaitForNewWindow(1000);
         UiObject editaCampo = mDevice.findObject(new UiSelector().resourceId("android:id/edit"));
-        editaCampo.click();
-        name.setText("NomeApn");
+        editaCampo.setText("NomeApn");
         UiObject btnOK = mDevice.findObject(new UiSelector().text("OK"));
         btnOK.clickAndWaitForNewWindow(2000);
 
         //Adiciona o nome do Apn
         UiObject apnName = mDevice.findObject(new UiSelector().text("APN"));
         apnName.clickAndWaitForNewWindow(1000);
-        editaCampo.click();
-        apnName.setText("apn1");
+        editaCampo.setText("apn1");
 
         btnOK.clickAndWaitForNewWindow(2000);
 
