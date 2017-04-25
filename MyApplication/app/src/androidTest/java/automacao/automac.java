@@ -4,6 +4,7 @@ import android.app.Instrumentation;
 import android.support.test.espresso.core.deps.publicsuffix.PublicSuffixPatterns;
 import android.support.test.uiautomator.UiDevice;
 import android.support.test.uiautomator.UiObject;
+import android.support.test.uiautomator.UiScrollable;
 import android.support.test.uiautomator.UiSelector;
 
 import org.junit.Before;
@@ -78,7 +79,7 @@ public class automac extends Instrumentation {
             cont=cont+1;
         }
         mDevice.pressHome();
-    } */
+    }
 
 
     public void addAlarm () throws Exception{
@@ -96,8 +97,53 @@ public class automac extends Instrumentation {
         UiObject addmin = mDevice.findObject(new UiSelector().resourceId("com.lge.sui.widget:id/minutes"));
         addmin.click();
         addmin.setText("20");
+    }*/
 
+    public void Apn () throws Exception {
+        mDevice.pressHome();
+        AbreMenuApp();
+        Ajustes();
+
+        UiScrollable More = new UiScrollable(new UiSelector().scrollable(true));
+        More.scrollIntoView(new UiSelector().text("More"));
+        UiObject MaisInfo = mDevice.findObject(new UiSelector().text("More"));
+        MaisInfo.clickAndWaitForNewWindow(1000);
+
+
+        UiObject mobNet = mDevice.findObject(new UiSelector().text("Mobile networks"));
+        mobNet.clickAndWaitForNewWindow(3000);
+
+        UiObject netOp = mDevice.findObject(new UiSelector().text("Access point names"));
+        netOp.clickAndWaitForNewWindow(3000);
+
+        mDevice.pressMenu();
+        UiObject apn = mDevice.findObject(new UiSelector().text("Add APN"));
+        apn.clickAndWaitForNewWindow(3000);
+
+        //Adiciona o nome do Apn
+        UiObject name = mDevice.findObject(new UiSelector().text("Name"));
+        name.clickAndWaitForNewWindow(1000);
+        UiObject editaCampo = mDevice.findObject(new UiSelector().resourceId("android:id/edit"));
+        editaCampo.click();
+        name.setText("NomeApn");
+        UiObject btnOK = mDevice.findObject(new UiSelector().text("OK"));
+        btnOK.clickAndWaitForNewWindow(2000);
+
+        //Adiciona o nome do Apn
+        UiObject apnName = mDevice.findObject(new UiSelector().text("APN"));
+        apnName.clickAndWaitForNewWindow(1000);
+        editaCampo.click();
+        apnName.setText("apn1");
+
+        btnOK.clickAndWaitForNewWindow(2000);
+
+        mDevice.pressMenu();
+        UiObject SalvaApn = mDevice.findObject(new UiSelector().text("Save"));
+        SalvaApn.clickAndWaitForNewWindow(2000);
+
+        mDevice.pressHome();
     }
+
 }
 
 
