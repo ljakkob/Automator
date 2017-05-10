@@ -35,8 +35,8 @@ public class perfomance extends Instrumentation {
     public void chat () throws Exception {
 
             UiObject TypeMessage = mDevice.findObject(new UiSelector().text("Type a message"));
-            TypeMessage.click();
-            TypeMessage.setText("Testando 123 abc pass or fail");
+            TypeMessage.clickAndWaitForNewWindow(3000);
+            TypeMessage.setText("123");
 
             UiObject Send = mDevice.findObject(new UiSelector().resourceId("com.whatsapp:id/send"));
             Send.click();
@@ -51,17 +51,17 @@ public class perfomance extends Instrumentation {
         UiObject Wapp = mDevice.findObject(new UiSelector().text("WhatsApp"));
         Wapp.clickAndWaitForNewWindow();
         int cont = 0;
-        while (cont<10) {
+        while (cont<2) {
             UiObject Grupo1 = mDevice.findObject(new UiSelector().index(2));
-            Grupo1.clickAndWaitForNewWindow();
+            Grupo1.click();
             chat();
             UiObject Grupo2 = mDevice.findObject(new UiSelector().index(3));
-            Grupo2.clickAndWaitForNewWindow();
+            Grupo2.click();
             chat();
             UiObject Grupo3 = mDevice.findObject(new UiSelector().index(4));
-            Grupo3.clickAndWaitForNewWindow();
+            Grupo3.click();
 
-            cont=cont+1;
+            cont++;
         }
 
         mDevice.pressBack();
