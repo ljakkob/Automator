@@ -62,7 +62,7 @@ public class automac extends Instrumentation {
     }*/
 
     @Test
-    /*public void AbreRadio () throws Exception {
+    public void AbreRadio () throws Exception {
         mDevice.pressHome();
         AbreMenuApp();
         UiObject radio = mDevice.findObject(new UiSelector().description("FM Radio"));
@@ -80,7 +80,7 @@ public class automac extends Instrumentation {
     }
 
 
-    public void addAlarm () throws Exception{
+    /*public void addAlarm () throws Exception{
         AbreMenuApp();
         UiObject addAlarm = mDevice.findObject(new UiSelector().description("Clock"));
         addAlarm.clickAndWaitForNewWindow(3000);
@@ -109,14 +109,14 @@ public class automac extends Instrumentation {
 
 
         UiObject mobNet = mDevice.findObject(new UiSelector().text("Mobile networks"));
-        mobNet.clickAndWaitForNewWindow(3000);
+        mobNet.clickAndWaitForNewWindow(1000);
 
         UiObject netOp = mDevice.findObject(new UiSelector().text("Access point names"));
-        netOp.clickAndWaitForNewWindow(3000);
+        netOp.clickAndWaitForNewWindow(1000);
 
         mDevice.pressMenu();
         UiObject apn = mDevice.findObject(new UiSelector().text("Add APN"));
-        apn.clickAndWaitForNewWindow(3000);
+        apn.clickAndWaitForNewWindow(1000);
 
         //Adiciona o nome do Apn
         UiObject name = mDevice.findObject(new UiSelector().text("Name"));
@@ -139,6 +139,9 @@ public class automac extends Instrumentation {
 
         mDevice.pressHome();
     }
+
+
+
 
 }
 
