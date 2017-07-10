@@ -32,21 +32,23 @@ public class perfomance extends Instrumentation {
         mDevice = UiDevice.getInstance(getInstrumentation());
     }
 
-    public void chat () throws Exception {
 
-            UiObject TypeMessage = mDevice.findObject(new UiSelector().text("Type a message"));
-            TypeMessage.clickAndWaitForNewWindow(3000);
-            TypeMessage.setText("123");
+    public void chat() throws Exception {
 
-            UiObject Send = mDevice.findObject(new UiSelector().resourceId("com.whatsapp:id/send"));
-            Send.click();
+        UiObject TypeMessage = mDevice.findObject(new UiSelector().text("Type a message"));
+        TypeMessage.clickAndWaitForNewWindow(1000);
+        TypeMessage.setText("123");
 
-            mDevice.pressBack();
-            mDevice.pressBack();
+        UiObject Send = mDevice.findObject(new UiSelector().resourceId("com.whatsapp:id/send"));
+        Send.click();
+
+        mDevice.pressBack();
+        mDevice.pressBack();
 
     }
 
-    public void chatFace () throws Exception {
+
+    public void chatFace() throws Exception {
 
         UiObject TypeMessage = mDevice.findObject(new UiSelector().resourceId("com.facebook.orca:id/text_input_bar"));
         TypeMessage.clickAndWaitForNewWindow(2000);
@@ -61,17 +63,17 @@ public class perfomance extends Instrumentation {
     }
 
     @Test
-    public void whats () throws Exception {
+    public void whats() throws Exception {
         mDevice.pressHome();
         UiObject Wapp = mDevice.findObject(new UiSelector().text("WhatsApp"));
-        Wapp.clickAndWaitForNewWindow();
+        Wapp.click();
         int cont = 0;
-        while (cont<55) {
+        while (cont < 50) {
             UiObject Grupo1 = mDevice.findObject(new UiSelector().index(2));
             Grupo1.click();
             chat();
 
-            UiObject Grupo2 = mDevice.findObject(new UiSelector().index(3));
+           UiObject Grupo2 = mDevice.findObject(new UiSelector().index(3));
             Grupo2.click();
             chat();
 
@@ -92,13 +94,13 @@ public class perfomance extends Instrumentation {
     }
 
 
-    public void Face () throws Exception{
+    public void Face() throws Exception {
 
         UiObject Fmsg = mDevice.findObject(new UiSelector().text("Messenger"));
         Fmsg.clickAndWaitForNewWindow();
 
         int cont = 0;
-        while (cont<40) {
+        while (cont < 40) {
             UiObject Grupo1 = mDevice.findObject(new UiSelector().index(0));
             Grupo1.click();
             chatFace();
@@ -111,18 +113,22 @@ public class perfomance extends Instrumentation {
             Grupo3.click();
             chatFace();
 
+            UiObject Grupo4 = mDevice.findObject(new UiSelector().index(3));
+            Grupo4.click();
+            chatFace();
+
             cont++;
         }
 
-        mDevice.pressBack();
+            mDevice.pressBack();
 
-            }
-
-
-
-
+    }
 
 }
+
+
+
+
 
 
 

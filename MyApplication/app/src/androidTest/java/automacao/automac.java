@@ -61,7 +61,7 @@ public class automac extends Instrumentation {
         SwitchBT.click();
     }*/
 
-    @Test
+
     public void AbreRadio () throws Exception {
         mDevice.pressHome();
         AbreMenuApp();
@@ -97,6 +97,7 @@ public class automac extends Instrumentation {
         addmin.setText("20");
     }*/
 
+    @Test
     public void Apn () throws Exception {
         mDevice.pressHome();
         AbreMenuApp();
